@@ -21,8 +21,8 @@ In your config.json file, you will want to look for the two instances where it a
           }
   ```
 
-Step 2: Edit the MapManger.js file
-Found inside the "jimu.js" folder, the MapManger.js file contains functions where the WAB attempts to load up your ArcGIS Online Web Map. 
+Step 2: Edit the MapManager.js file
+Found inside the "jimu.js" folder, the MapManager.js file contains functions where the WAB attempts to load up your ArcGIS Online Web Map. 
 
 The first thing that you will do is find the initial instance of function "_show2DWebMap", which you should find at line 79. Comment out the call to this function and put in a call to a new function there "_show2DLayersMap" (ex: this._show2DLayersMap(appConfig);)
 
