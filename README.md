@@ -11,6 +11,16 @@ So you've downloaded your WAB based web map and would like to use your ArcGIS Se
 Step 1: Edit the config.json file
 In your config.json file, you will want to look for the two instances where it asks for the two instances where it asks for portalUrl and make sure that it is referencing your organization URL (if you don't have one you can also use a free Developer url as well (you can sign up here https://developers.arcgis.com/en/sign-up/). Though you may not be using any services hosted on the URL, the Web App Builder still needs something to take in in order to get through it's set up so make sure a valid url is filled out for those two instances of "portalUrl".
 
+```
+ if (appConfig.map.itemId) {
+            //this._show2DWebMap(appConfig);
+			this._show2DLayersMap(appConfig);
+          } else {
+			this._show2DLayersMap(appConfig);
+            console.log('No webmap found. Please set map.itemId in config.json.');
+          }
+  ```
+
 Step 2: Edit the MapManger.js file
 Found inside the "jimu.js" folder, the MapManger.js file contains functions where the WAB attempts to load up your ArcGIS Online Web Map. 
 
